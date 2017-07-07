@@ -9,3 +9,6 @@ zuul:
     api-b:
       path: /attend/**
       serviceId: service-B
+  filter:
+    root: filter
+    interval: 5
