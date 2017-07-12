@@ -5,3 +5,6 @@ spring:
     port: 5672
     username: springcloud
     password: 123456
+  cloud:
+    bus:
+      destination: bus
