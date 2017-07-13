@@ -1,5 +1,5 @@
 from: git-dev-1.4
-spring
+spring:
   rabbitmq:
     host: localhost
     port: 5672
