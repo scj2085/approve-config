@@ -1,4 +1,4 @@
-from: git-dev-1.3-cloud-config-repo
+from: git-dev-1.3-approve-repo
 spring:
   rabbitmq:
     host: localhost
