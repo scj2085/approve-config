@@ -1,0 +1,18 @@
+management:
+  port: ${MANAGEMENT_PORT:8766}
+message:
+  send:
+    host: http://web.cr6868.com/asmx/smsservice.aspx
+    username: 15313729295
+    password: 3040D5ACE3A9C2EE25C46F42FB9C
+    sign: 国美互联网企业云
+  captcha:
+    send:
+      type: pt
+      template_password: 您的“平台管理门户”账号已开通，账号为该手机号，初始密码为{0}，请电脑登录{1}网址访问。
+      template_captcha: 验证码{0}，有效期15分钟，用于忘记密码验证。请勿将验证码泄露他人。
+      url: ${message.send.host}?name=${message.send.username}&pwd=${message.send.password}&stime=&sign={1}&type=${message.captcha.send.type}&extno=&mobile={2}&content={3}
+
+mysql:
+  schema: meipro_operation
+

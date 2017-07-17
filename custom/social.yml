@@ -1,0 +1,49 @@
+management:
+  port: ${MANAGEMENT_PORT:8764}
+
+im:
+  urlParam: ?appId=${im.appid}&timestamp={0}&signature={1}
+  urlParam4userid: ?appId=${im.appid}&timestamp={0}&signature={1}&userId={2}
+
+  sendSystemNotice: ${im.host}/message/sendSystemNotice.json
+  notifyMessage: ${im.host}/message/notifyMessage.json
+  broadcastMessage: ${im.host}/message/broadcastMessage.json
+
+  getToken: ${im.host}/user/getToken.json
+  register: ${im.host}/user/register.json
+  checkUser: ${im.host}/user/checkUser.json
+
+  listGroup: ${im.host}/group/listGroup.json
+  getGroupInfo: ${im.host}/group/getGroupInfo.json
+  getGroupMembers: ${im.host}/group/getGroupMembers.json
+  getGroupsMembers: ${im.host}/group/getGroupMembersByGroupIds.json
+  addGroup: ${im.host}/group/addGroup.json
+  joinGroup: ${im.host}/group/joinGroup.json
+  disbandGroup: ${im.host}/group/disbandGroup.json
+  quitGroup: ${im.host}/group/quitGroup.json
+  kickGroup: ${im.host}/group/kickGroup.json
+  inviteGroup: ${im.host}/group/inviteGroup.json
+  editGroup: ${im.host}/group/editGroup.json
+  modifyGroupManager: ${im.host}/group/modifyGroupManager.json
+  scanQRJoinGroup: ${im.host}/group/scanQRJoinGroup.json
+  operateGroupBulletin: ${im.host}/group/modifyGroupNotice.json
+  getGroupBulletin: ${im.host}/group/getGroupNotice.json
+  getGroupMembersByPage: ${im.host}/group/getGroupMembersByPage.json
+  groupCapacity: 100
+  maxUploadFileSize: 524288000
+
+  addChannel: ${im.channel-host}/channel/addChannel
+  editChannel: ${im.channel-host}/channel/editChannel
+  joinChannel: ${im.channel-host}/channel/joinChannel
+  quitChannel: ${im.channel-host}/channel/quitChannel
+  deleteChannel: ${im.channel-host}/channel/delete
+  enableChannel: ${im.channel-host}/channel/channelEnable
+  addMembers: ${im.channel-host}/channel/addMembers
+  deleteMembers: ${im.channel-host}/channel/deleteMembers
+  publishNotice: ${im.channel-host}/channel/publishNotice
+  setReceiveMsg: ${im.channel-host}/channel/setReceiveMsg
+  setRemindMsg: ${im.channel-host}/channel/setRemindMsg
+  noticeMessage: ${im.channel-host}/message/noticeMessage
+
+mysql:
+  schema: meipro

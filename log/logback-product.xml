@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2016. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+	<property name="LOG_PATH" value="\${LOG_PATH:-\${LOG_TEMP:-\${java.io.tmpdir:-/tmp}}}" />
+	<!-- ch.qos.logback.core.ConsoleAppender 控制台输出 -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[%-5level] [%thread] %X{client} %X{trace_id} %d{HH:mm:ss} %logger => %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 系统日志文件输出 -->
+	<appender name="file"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>\${LOG_PATH}/meipro-system.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>\${LOG_PATH}/meipro-system.%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%-5level] [%thread] %X{client} %X{trace_id} %d{HH:mm:ss} %logger{36} => %msg%n</pattern>
+		</layout>
+	</appender>
+
+
+	<!-- 操作记录日志文件 -->
+	<appender name="file-operation"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>\${LOG_PATH}/meipro-operation.log</File>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>\${LOG_PATH}/meipro-operation.%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%-5level] [%thread] %X{client} %X{trace_id} %d{HH:mm:ss} %logger{36} => %msg%n</pattern>
+		</layout>
+	</appender>
+	<!-- 操作记录日志文件 -->
+	<appender name="file-error"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>\${LOG_PATH}/meipro-error.log</File>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>\${LOG_PATH}/meipro-error.%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%-5level] [%thread] %X{client} %X{trace_id} %d{HH:mm:ss} %logger{36} => %msg%n</pattern>
+		</layout>
+	</appender>
+
+	<appender name="file-debug" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>\${LOG_PATH}/meipro-debug.log</File>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>DEBUG</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<encoder>
+			<pattern>[%-5level] [%thread] %X{client} %X{trace_id} %d{HH:mm:ss} %logger{36} => %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>\${LOG_PATH}/meipro-debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	
+	<appender name="file-msg" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>\${LOG_PATH}/meipro-msg.log</File>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>\${LOG_PATH}/meipro-msg.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="file-slowQueryReport" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>\${LOG_PATH}/meipro-slow.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>\${LOG_PATH}/meipro-slow.%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%-5level] [%thread] %X{client} %X{trace_id} %X{user_id} %d{HH:mm:ss} %logger => %msg%n</pattern>
+		</layout>
+	</appender>
+
+	<logger name="com.gomeplus.meipro.uc.dao" level="error"/>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core" level="error"/>
+	<logger name="org.springframework.beans" level="error"/>
+	<logger name="org.springframework.context" level="error"/>
+	<logger name="org.springframework.web" level="error"/>
+	<logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="error"/>
+	<logger name="org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor" level="error"/>
+	<logger name="org.springframework.boot" level="error" />
+	<logger name="org.springframework.cloud" level="error" />
+	<logger name="org.springframework.amqp" level="error" />
+	<logger name="org.springframework.aop" level="error" />
+	<logger name="org.springframework.jmx" level="error" />
+	<logger name="org.springframework.jdbc" level="error" />
+	<logger name="org.springframework.transaction" level="error" />
+	<logger name="ch.qos.logback" level="error" />
+	<logger name="org.activiti" level="error" />
+	<logger name="org.hibernate.validator" level="error" />
+	<logger name="org.apache.shiro" level="info"/>
+	<logger name="org.apache.http" level="error"/>
+	<logger name="org.apache.ibatis" level="error"/>
+	<logger name="org.apache.coyote" level="error"/>
+	<logger name="org.apache.tomcat" level="error"/>
+	<logger name="org.apache.catalina" level="error"/>
+	<logger name="org.mybatis" level="error"/>
+	<logger name="com.netflix" level="error"/>
+	<!-- 日志级别 -->
+	<root level="info">
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+        <appender-ref ref="file-error" />
+        <appender-ref ref="file-debug" />
+        <appender-ref ref="file-operation" />
+	</root>
+	<logger name="org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReport" level="warn" additivity="false">
+		<appender-ref ref="file-slowQueryReport" />
+	</logger>
+</configuration>

@@ -1,0 +1,43 @@
+management:
+  port: ${MANAGEMENT_PORT:8762}
+
+spring:
+  cloud:
+    stream:
+      binders:
+        rabbit1:
+          type: rabbit
+      bindings:
+        output:
+          destination: trace
+          binder: rabbit1
+
+im:
+  urlParam: ?appId=${im.appid}&timestamp={0}&signature={1}
+  urlParam4userid: ?appId=${im.appid}&timestamp={0}&signature={1}&userId={2}
+  getToken: ${im.host}/user/getToken.json
+  register: ${im.host}/user/register.json
+  checkUser: ${im.host}/user/checkUser.json
+  notifyMessage: ${im.host}/message/notifyMessage.json
+  sendSystemNotice: ${im.host}/message/sendSystemNotice.json
+
+message:
+  send:
+    host: http://web.cr6868.com/asmx/smsservice.aspx
+    username: 15313729295
+    password: 3040D5ACE3A9C2EE25C46F42FB9C
+    sign: 国美互联网企业云
+  captcha:
+    send:
+      type: pt
+      template: 验证码：{0}   有效期：15分钟
+      template_reset: 验证码：{0}，用于找回账号密码。请勿将验证码泄露于他人。
+      template_register_company: 验证码{0}，有效期15分钟。请勿将验证码泄露他人。
+      url: ${message.send.host}?name=${message.send.username}&pwd=${message.send.password}&stime=&sign={1}&type=${message.captcha.send.type}&extno=&mobile={2}&content={3}
+
+mysql:
+  host:
+  port:
+  username:
+  password:
+  schema: meipro

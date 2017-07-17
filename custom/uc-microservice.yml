@@ -1,0 +1,5 @@
+management:
+  port: ${MANAGEMENT_PORT:8765}
+
+mysql:
+  schema: meipro
