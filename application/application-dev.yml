@@ -1,4 +1,4 @@
-from: approve-config/application/application-dev.yml11
+from: approve-config/application/application-dev.yml22
 spring:
   rabbitmq:
     host: localhost
