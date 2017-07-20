@@ -9,7 +9,9 @@ spring:
   sleuth:
     sampler:
       percentage: 1	#spans的收集率
-
+management:
+  security:
+    enabled: false  #cloud D版post刷新，默认true，不能刷新
 #logging:	#？？？？？？
 #  config: ${LOGBACK_CONFIG:http://localhost:9999/configServer/${spring.application.name}/${spring.profiles.active:default}/${spring.cloud.config.label:master}/logback.xml}
 #  path: log
