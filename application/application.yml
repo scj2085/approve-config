@@ -8,7 +8,7 @@ spring:
     integration:
       patterns: trace	#以明确提供要包括的用于跟踪的通道的名称。默认情况下，所有通道都包含在内。
 ribbon:
-  EnableZoneExclusivity: true	
+#  EnableZoneExclusivity: true	
   ReadTimeout: 15000	#如果代理路由引导您通过Ribbon负载均衡器，文件上传超时设置
   ConnectTimeout: 5000
 
