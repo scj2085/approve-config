@@ -29,7 +29,7 @@ eureka:
     health-check-url-path: ${server.context-path:}/health	#获取此实例的相对运行状况检查URL路径。然后，健康检查页面URL由主机名和通信类型构建，如securePort和nonSecurePort中指定的安全或不安全。????
     status-page-url-path: ${server.context-path:}/info	#获取此实例的相对状态页面URL路径。然后，状态页面URL由安全端口和非安全端口中指定的hostName和通信类型构建 - 安全或不安全。它通常用于其他服务的信息目的，以查找此实例的状态。用户可以提供一个简单的HTML来指示实例的当前状态。????
 #    metadata-map:
-#      zone: ${spring.profiles.active}	#服务器部署区域设置
+#      zone: ${spring.profiles.active}	#服务器部署区域设置，防止各环境串，如：开发，预生产，生产之间串，此配置不符合，待解决？？？？？？？？？
   client:
     serviceUrl:
 #      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
