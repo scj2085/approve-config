@@ -32,8 +32,8 @@ eureka:
 #      zone: ${spring.profiles.active}	#服务器部署区域设置，防止各环境串，如：开发，预生产，生产之间串，注意：此配置不符合，不要打开注释，待解决？？？？？？？？？
   client:
     serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
-      defaultZone: "http://localhost:8761/eureka/"
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
+ #     defaultZone: "http://localhost:8761/eureka/"
 #    healthcheck:
 #      enabled: true	#eureka.client.healthcheck.enabled=true只能在application.yml中设置
  #   prefer-same-zone-eureka: false	#服务器部署区域设置，此配置不符合，不要打开注释，待解决？？？？？？
