@@ -8,5 +8,5 @@ zuul:
       serviceId: approve #项目服务名
       strip-prefix: false	#在转发之前标记是否从路径中删除前缀。X-Forwarder-Host请求头默认添加到转发请求中。设置zuul.addProxyHeaders=false禁用它。路径前缀默认被删除， 到后台服务的请求会添加一个 “X-Forwarded-Prefix”(“/v*/**”在上面的例子中)。
     ribbon-zull:
-      path: /ribbon2222/**
+      path: /ribbon2222333/**
       serviceId: client-ribbon            

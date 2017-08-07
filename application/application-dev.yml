@@ -21,7 +21,7 @@ spring:
 #message:
 #  send:
 #    switch:
-#      close: true	#？？？？？？
+#      close: true	#？？？？
 
 eureka:
 #  instance:
