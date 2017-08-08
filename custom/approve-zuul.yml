@@ -6,24 +6,24 @@ zuul:
 #  sensitive-headers:	#默认设置sensitiveHeaders: Cookie,Set-Cookie,Authorization，无需设置除非你需要不同的配置.敏感headers也支持全局设置 zuul.sensitiveHeaders. 如果在单个路由中设置 sensitiveHeaders 会覆盖全局 sensitiveHeaders 设置.
   routes:
     approve-zull: #随意取名
-      path: /approve1111/** #approve1111随意取名
+      path: /approve-zull/** #approve1111随意取名
       serviceId: approve #项目服务名,这个例子是与eureka整合的 服务 配置,注意：不能使用url，否则不能负载均衡，使用serviceId的映射方式，除了对Zuul维护上更加友好之外，serviceId映射方式还支持了断路器，对于服务故障的情况下，可以有效的防止故障蔓延到服务网关上而影响整个系统的对外服务
       strip-prefix: false	#在转发之前标记是否从路径中删除前缀。X-Forwarder-Host请求头默认添加到转发请求中。设置zuul.addProxyHeaders=false禁用它。路径前缀默认被删除， 到后台服务的请求会添加一个 “X-Forwarded-Prefix”(“/v*/**”在上面的例子中)。
     ribbon-zull-as:
-      path: /ribbon2222333/as/**
+      path: /ribbon-zull-as/as/**
       serviceId: approve 
     ribbon-zull:
-      path: /ribbon2222333/**
+      path: /ribbon-zull/**
       serviceId: client-ribbon 
       
 #传统路由
 #zuul:
 #  routes:
 #    api-a-url2: 
-#      path: /schedule2/** #特别注意：这个例子是 多实例配置，没有和eureka整合的传统路由zuul配置 ，多实例配置，url实例并没有整合类似eureka之类的服务治理框架，所以要设置ribbon.eureka.enabled=false，否则配置的serviceId获取不到对应的实例清单，url的负载路由是用手工维护服务和实例的对应关系。
+#      path: /api-a-url2/** #特别注意：这个例子是 多实例配置，没有和eureka整合的传统路由zuul配置 ，多实例配置，url实例并没有整合类似eureka之类的服务治理框架，所以要设置ribbon.eureka.enabled=false，否则配置的serviceId获取不到对应的实例清单，url的负载路由是用手工维护服务和实例的对应关系。
 #      serviceId: schedule5 
 #    api-a-url3: 
-#      path: /schedule3/** #特别注意：这个例子是单实例配置 ，没有和eureka整合的传统路由zuul配置 ，单实例配置
+#      path: /api-a-url3/** #特别注意：这个例子是单实例配置 ，没有和eureka整合的传统路由zuul配置 ，单实例配置
 #      url: http://localhost:9004/ #也就是说当我们访问http://localhost:5555/api-a-url/add?a=1&b=2的时候，Zuul会将该请求路由到：http://localhost:2222/add?a=1&b=2
 #ribbon.eureka.enabled=false #第一个例子schedule5服务，传统路由要加上此配置
 #schedule5.ribbon.listOfServers=http://localhost:9004/,http://localhost:9005/
