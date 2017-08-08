@@ -3,8 +3,8 @@ zuul:
   host:
     maxTotalConnections: 200 #适用于ApacheHttpClient，如果是okhttp无效。每个服务的http客户端连接池最大连接，默认是200.
     maxPerRouteConnections: 20 #适用于ApacheHttpClient，如果是okhttp无效。每个route可用的最大连接数，默认值是20
-    socket-timeout-millis: 60000 #读写时间，毫秒
-    connect-timeout-millis: 60000 #连接时间，毫秒
+    socket-timeout-millis: 80000 #读写时间，毫秒
+    connect-timeout-millis: 80000 #连接时间，毫秒
 #注意：此配置表示zuul将使用此表达式，对所有服务不自动创建路由规则，会根据“routes中” 自己配的路由规则执行，如不陪此表达式，zuul将使用默认匹配规则，根据服务名作为外部请求的前缀自动匹配路由，就是说，在浏览器输入路由的前缀名和服务名一样时会自动匹配此路由进入此服务，产生安全隐患。
   ignored-services: "*"
 # TODO: 去掉每个端口中admin的访问
