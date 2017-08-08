@@ -14,7 +14,7 @@ zuul:
     approve-zull: #随意取名
       path: /approve-zull/** #approve1111随意取名
       serviceId: approve #项目服务名,这个例子是与eureka整合的 服务 配置,注意：不能使用url，否则不能负载均衡，使用serviceId的映射方式，除了对Zuul维护上更加友好之外，serviceId映射方式还支持了断路器，对于服务故障的情况下，可以有效的防止故障蔓延到服务网关上而影响整个系统的对外服务
-      strip-prefix: false	#来关闭移除代理前缀的的动作，局部配置
+#      strip-prefix: false	#来关闭移除代理前缀的的动作，局部配置
       customSensitiveHeaders: true #指定此路由开启自定义敏感头，默认不向下一个服务传递头
     ribbon-zull-as:
       path: /ribbon-zull/as/**
@@ -22,7 +22,7 @@ zuul:
     ribbon-zull:
       path: /ribbon-zull/**
       serviceId: client-ribbon 
-      strip-prefix: false	#来关闭移除代理前缀的的动作，局部配置???????
+#      strip-prefix: false	#来关闭移除代理前缀的的动作，局部配置???????
       customSensitiveHeaders: true #指定此路由开启自定义敏感头，默认不向下一个服务传递头
 
 
