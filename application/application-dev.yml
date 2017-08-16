@@ -4,7 +4,7 @@ spring:
     host: localhost
     port: 5672
     username: springcloud
-    password: '{cipher}AQCGhstM3ht/gqNogPmUvllMNZll/NihntOBMSbLUSWoTuVWuHdd1IWUAdW/wi3JQUeDcZsns45TGyxA7CPbuRq0/BTTeDeP8NlDME6aaTQF60ar4tjNc5oMD9ZxEOsulB/EI5F9isGJagKiu50r/lf5zvFJkacBCrpg6Q5EUVHXiF1cu/LIkRGZvhGevBTxcIjxG8N5Iot8gx6xE7SGm3BwUvjwp7kYZZIjZwvBEURsBL7kTl9Jk1xmlC0hqVsSU36CT+wskwwkW/EWW1MAdS/XUXPOEquuY0mLvU68sR9BMURZVsF5WliN7gwA2jJzeoi2JnJWONI0ses7LYaErdyFb3qNWBIFl18eOr+1cxUC1Gco0hxAdv2EUZ7eA4HOhZg='
+    password: '{cipher}AQCGhstM3ht/gqNogPmUvllMNZll/NihntOBMSbLUSWoTuVWuHdd1IWUAdW/wi3JQUeDcZsns45TGyxA7CPbuRq0/BTTeDeP8NlDME6aaTQF60ar4tjNc5oMD9ZxEOsulB/EI5F9isGJagKiu50r/lf5zvFJkacBCrpg6Q5EUVHXiF1cu/LIkRGZvhGevBTxcIjxG8N5Iot8gx6xE7SGm3BwUvjwp7kYZZIjZwvBEURsBL7kTl9Jk1xmlC0hqVsSU36CT+wskwwkW/EWW1MAdS/XUXPOEquuY0mLvU68sR9BMURZVsF5WliN7gwA2jJzeoi2JnJWONI0ses7LYaErdyFb3qNWBIFl18eOr+1cxUC1Gco0hxAdv2EUZ7eA4HOhZg=' #密码123456
 #    virtual-host: /work-office
   sleuth:
     sampler:
@@ -24,6 +24,7 @@ spring:
 #      close: true	#？？？？
 
 eureka:
+  password: '{cipher}AQA5VXlJd8uUzM+/XL2pFoL3/vUb8CpbSEu4UstIs4lu819vKVvLCr+EamkcDO1gmhdcjWOSgM2VPATveGF8Co499Gyqcg2M0ShHiiUla6utTAQQjQFBdxJWNZ/2FCXM5xAelSfEMb6LiXGkj1I89uV9o6w2fBTY9HmPr7S8IUB4iB3aLjKKHaGJvEpBHVUe0YTmoTHa0x0TDk4M9fOENOl9cOXWm0ewEyP9DHIBDdxleoL21Zm/+0IOuVq3M79EGA1b1ytCBQcimASkMxnUmeFBXGRHDBCu6iVbF4RgQ5xgkIFdjXDDgncFbU4HlPFsGIK8cIH6sYeG7YmBYyO6twVAuGxI31qAlL41zht/XmzPWoFzFoWP4OlP52ln1JwwHuY=' #密码123
 #  instance:
 #    prefer-ip-address: true	#当猜测主机名时，服务器的IP地址应该在操作系统报告的主机名中使用。？？？？？
 #    health-check-url-path: ${server.context-path:}/health	#获取此实例的相对运行状况检查URL路径。然后，健康检查页面URL由主机名和通信类型构建，如securePort和nonSecurePort中指定的安全或不安全。????
@@ -33,7 +34,7 @@ eureka:
   client:
     serviceUrl:
  #     defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
-      defaultZone: "http://shi:'{cipher}AQA5VXlJd8uUzM+/XL2pFoL3/vUb8CpbSEu4UstIs4lu819vKVvLCr+EamkcDO1gmhdcjWOSgM2VPATveGF8Co499Gyqcg2M0ShHiiUla6utTAQQjQFBdxJWNZ/2FCXM5xAelSfEMb6LiXGkj1I89uV9o6w2fBTY9HmPr7S8IUB4iB3aLjKKHaGJvEpBHVUe0YTmoTHa0x0TDk4M9fOENOl9cOXWm0ewEyP9DHIBDdxleoL21Zm/+0IOuVq3M79EGA1b1ytCBQcimASkMxnUmeFBXGRHDBCu6iVbF4RgQ5xgkIFdjXDDgncFbU4HlPFsGIK8cIH6sYeG7YmBYyO6twVAuGxI31qAlL41zht/XmzPWoFzFoWP4OlP52ln1JwwHuY='@localhost:8761/eureka/"
+      defaultZone: "http://shi:${eureka.password}@localhost:8761/eureka/" #如果端口加密，要加上域名，此问题待解决？？？？？？？？
 #    healthcheck:
 #      enabled: true	#eureka.client.healthcheck.enabled=true只能在application.yml中设置
  #   prefer-same-zone-eureka: false	#服务器部署区域设置，此配置不符合，不要打开注释，待解决？？？？？？
@@ -42,5 +43,5 @@ mysql:
   host: localhost
   port: 3306
   username: root
-  password: '{cipher}AQCHVaN1IE0o4Cup5X1CzBX5TVnaNdcXOGMzdOFlspu8xfZWWSly8/eCLn2Wf5B46+3Y250ghiSnyVP2g+kwDXSTGazGizaO68XvRSIEh4PDUlLtUsU0YaqhKMkvyAtw71bFqJxfyKwJcw+S1QWnrRSAV8oEXDmVJvjbcILrFqudAHsOgzI+I5kQWyQLvr9eM389zxT/xeX94WLctX/LZVUUYCwm9Mmj0ulZMuK25smAtRX8hRgxsPGMA2AeVS542k/IQGpsZGA8CApJ7JCgnm+PLhS0am6bQGt1URmtorOZe+rknLfZ7YS/V0ZlV4es28lonosg9QuNRkZlCy2vgdcyPLhFWisxy7GgUNNonTteLRRxBHtDNgKjVGZ3/Omf2Pg='
+  password: '{cipher}AQCHVaN1IE0o4Cup5X1CzBX5TVnaNdcXOGMzdOFlspu8xfZWWSly8/eCLn2Wf5B46+3Y250ghiSnyVP2g+kwDXSTGazGizaO68XvRSIEh4PDUlLtUsU0YaqhKMkvyAtw71bFqJxfyKwJcw+S1QWnrRSAV8oEXDmVJvjbcILrFqudAHsOgzI+I5kQWyQLvr9eM389zxT/xeX94WLctX/LZVUUYCwm9Mmj0ulZMuK25smAtRX8hRgxsPGMA2AeVS542k/IQGpsZGA8CApJ7JCgnm+PLhS0am6bQGt1URmtorOZe+rknLfZ7YS/V0ZlV4es28lonosg9QuNRkZlCy2vgdcyPLhFWisxy7GgUNNonTteLRRxBHtDNgKjVGZ3/Omf2Pg=' #密码root
 
