@@ -4,7 +4,7 @@ spring:
     host: localhost
     port: 5672
     username: springcloud
-    password: 123456
+    password: '{cipher}AQCGhstM3ht/gqNogPmUvllMNZll/NihntOBMSbLUSWoTuVWuHdd1IWUAdW/wi3JQUeDcZsns45TGyxA7CPbuRq0/BTTeDeP8NlDME6aaTQF60ar4tjNc5oMD9ZxEOsulB/EI5F9isGJagKiu50r/lf5zvFJkacBCrpg6Q5EUVHXiF1cu/LIkRGZvhGevBTxcIjxG8N5Iot8gx6xE7SGm3BwUvjwp7kYZZIjZwvBEURsBL7kTl9Jk1xmlC0hqVsSU36CT+wskwwkW/EWW1MAdS/XUXPOEquuY0mLvU68sR9BMURZVsF5WliN7gwA2jJzeoi2JnJWONI0ses7LYaErdyFb3qNWBIFl18eOr+1cxUC1Gco0hxAdv2EUZ7eA4HOhZg='
 #    virtual-host: /work-office
   sleuth:
     sampler:
@@ -33,7 +33,7 @@ eureka:
   client:
     serviceUrl:
  #     defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
-      defaultZone: "http://shi:123@localhost:8761/eureka/"
+      defaultZone: "http://shi:'{cipher}AQA5VXlJd8uUzM+/XL2pFoL3/vUb8CpbSEu4UstIs4lu819vKVvLCr+EamkcDO1gmhdcjWOSgM2VPATveGF8Co499Gyqcg2M0ShHiiUla6utTAQQjQFBdxJWNZ/2FCXM5xAelSfEMb6LiXGkj1I89uV9o6w2fBTY9HmPr7S8IUB4iB3aLjKKHaGJvEpBHVUe0YTmoTHa0x0TDk4M9fOENOl9cOXWm0ewEyP9DHIBDdxleoL21Zm/+0IOuVq3M79EGA1b1ytCBQcimASkMxnUmeFBXGRHDBCu6iVbF4RgQ5xgkIFdjXDDgncFbU4HlPFsGIK8cIH6sYeG7YmBYyO6twVAuGxI31qAlL41zht/XmzPWoFzFoWP4OlP52ln1JwwHuY='@localhost:8761/eureka/"
 #    healthcheck:
 #      enabled: true	#eureka.client.healthcheck.enabled=true只能在application.yml中设置
  #   prefer-same-zone-eureka: false	#服务器部署区域设置，此配置不符合，不要打开注释，待解决？？？？？？
