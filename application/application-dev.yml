@@ -1,4 +1,5 @@
 from: approve-config/application/application-dev.yml22
+spring.datasource.password: {cipher}ce0555eb347c2cb94e34997b915ff3525497d0a8aa532ecbea8912b075c8b36a
 spring:
   rabbitmq:
     host: localhost
@@ -42,5 +43,5 @@ mysql:
   host: localhost
   port: 3306
   username: root
-  password: {cipher}ce0555eb347c2cb94e34997b915ff3525497d0a8aa532ecbea8912b075c8b36a
+  password: {spring.datasource.password}
 
