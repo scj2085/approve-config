@@ -33,7 +33,7 @@ eureka:
   client:
     serviceUrl:
  #     defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
-      defaultZone: "http://shi:123@localhost:8761/eureka/"
+      defaultZone: "http://shi:{cipher}a143924b2874d829abfbf63411be2bac8b36bc93cc457d21f33e8b66d6ab09d1@localhost:8761/eureka/"
 #    healthcheck:
 #      enabled: true	#eureka.client.healthcheck.enabled=true只能在application.yml中设置
  #   prefer-same-zone-eureka: false	#服务器部署区域设置，此配置不符合，不要打开注释，待解决？？？？？？
