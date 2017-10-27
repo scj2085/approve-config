@@ -4,7 +4,6 @@ spring:
     host: localhost
     port: 5672
     username: springcloud
-#    password: '{cipher}AQCGhstM3ht/gqNogPmUvllMNZll/NihntOBMSbLUSWoTuVWuHdd1IWUAdW/wi3JQUeDcZsns45TGyxA7CPbuRq0/BTTeDeP8NlDME6aaTQF60ar4tjNc5oMD9ZxEOsulB/EI5F9isGJagKiu50r/lf5zvFJkacBCrpg6Q5EUVHXiF1cu/LIkRGZvhGevBTxcIjxG8N5Iot8gx6xE7SGm3BwUvjwp7kYZZIjZwvBEURsBL7kTl9Jk1xmlC0hqVsSU36CT+wskwwkW/EWW1MAdS/XUXPOEquuY0mLvU68sR9BMURZVsF5WliN7gwA2jJzeoi2JnJWONI0ses7LYaErdyFb3qNWBIFl18eOr+1cxUC1Gco0hxAdv2EUZ7eA4HOhZg=' #密码123456
     password: '{cipher}AQBcTcOpfJDg+0Rr5HRpxzEzIE76Ox9J51IHnLyZhzx3PFeCI7FllYhqJNElM235AUKGXcT8/af1KJxBVZGwBz5/Itw9EB3LJm71F0Zpy8t+i/OG+C8u9SIlHpTqk/yo/mKaXsgEne/Czr2A5WP3/9xFQaP67qqXYvhogsDJZsFGJXEBAF9A78Ac7MXDmsEI6mcA1BoQ1Bwc7SBxorEVV1K0PkmEG8TGsb6NWxV+DKP0hENLkIZqYX0hVvR+QTppNakFvKF7ve1xsLw++T1kjT48Ymp2GQR1MmzgFClLy6+qwNjaFaIHFt7PXRmvqPfbOzZzz2L+ReKMZZKcJMTiiuBFM/M055qutykI+oYUVpPuDdE4ZXjMmQytqJjmI8yYyNI=' #密码123456
 #    virtual-host: /work-office
   sleuth:
@@ -25,7 +24,6 @@ spring:
 #      close: true	#？？？？
 
 eureka:
-#  password: '{cipher}AQA5VXlJd8uUzM+/XL2pFoL3/vUb8CpbSEu4UstIs4lu819vKVvLCr+EamkcDO1gmhdcjWOSgM2VPATveGF8Co499Gyqcg2M0ShHiiUla6utTAQQjQFBdxJWNZ/2FCXM5xAelSfEMb6LiXGkj1I89uV9o6w2fBTY9HmPr7S8IUB4iB3aLjKKHaGJvEpBHVUe0YTmoTHa0x0TDk4M9fOENOl9cOXWm0ewEyP9DHIBDdxleoL21Zm/+0IOuVq3M79EGA1b1ytCBQcimASkMxnUmeFBXGRHDBCu6iVbF4RgQ5xgkIFdjXDDgncFbU4HlPFsGIK8cIH6sYeG7YmBYyO6twVAuGxI31qAlL41zht/XmzPWoFzFoWP4OlP52ln1JwwHuY=' #密码123
   password: '{cipher}AQB250VG34Zc39FZ/B0Vk38tDy3NjpIVbMVmAAwpvfbZ+bJtWav4yYIX93bwS8Z0lNjAUhWT9nzpz3c3v1oC04GlAwBPiPCh42KiC8rx1UvNDCfsl7tycwAqLBimbFNaRR/PWsWuUPPgBHv79AYIHJZZLwMC9S0w7GWy8gLGktz8oxeGM4dDz+pxTTHiegR5HivQnHLEHUqAhEiHa43YSwmQrgOT+LUxAl/U3+jV+iV8h634h4uBudqEtuP3YOvlmu4eOya0sX0qCG7uEsUL6pHCzWrYPOKh3SQnUy/3AaNF6joaZZDJ+0VrXHxlArJEDPYnEnFFXoBP6jYphy79lCJok/vZq3Og6cVt1j+fHH2fYJdiAK+Md9zMlV+/r4rkIR0=' #密码123
 #  instance:
 #    prefer-ip-address: true	#当猜测主机名时，服务器的IP地址应该在操作系统报告的主机名中使用。？？？？？
@@ -45,6 +43,5 @@ mysql:
   host: localhost
   port: 3306
   username: root
-#  password: '{cipher}AQCHVaN1IE0o4Cup5X1CzBX5TVnaNdcXOGMzdOFlspu8xfZWWSly8/eCLn2Wf5B46+3Y250ghiSnyVP2g+kwDXSTGazGizaO68XvRSIEh4PDUlLtUsU0YaqhKMkvyAtw71bFqJxfyKwJcw+S1QWnrRSAV8oEXDmVJvjbcILrFqudAHsOgzI+I5kQWyQLvr9eM389zxT/xeX94WLctX/LZVUUYCwm9Mmj0ulZMuK25smAtRX8hRgxsPGMA2AeVS542k/IQGpsZGA8CApJ7JCgnm+PLhS0am6bQGt1URmtorOZe+rknLfZ7YS/V0ZlV4es28lonosg9QuNRkZlCy2vgdcyPLhFWisxy7GgUNNonTteLRRxBHtDNgKjVGZ3/Omf2Pg=' #密码root
   password: '{cipher}AQBalygAEqtll2G9dT7uh4IWVQZOopJmu1uPM6rLT6Y2cl2wEHpisa7Y9wO7+SaztSnWOTmALbwHKbw44qvM7a197NBCpUxXQKlCGvFpS6yYlfcxOPJytoSmLEbd3Is7SaGSWuQELv2eFkSYRrArErEHr2WxwcW1Wor+U/NsmXmPPKLVbe3KYr4qGRenDo+VbT1zxTrk2VEaYL5SdsCbbkp6qcr307kY63NmdPBQS3MyLp4jt1qgnlIe7Nzgvg9uTfwd0aZlUv7E0cvkYUs1QBt3bzf7Q3dXv0HXLlcmFZcfcqooz6O9zQZRZtnZT+QUyrKc46AgZbZ5gPkjZL6kx2qV/Nz3h2CvMKupSsL6ewJoBjBnE0Z5RTtyX4/TwpnBGuU=' #密码root
 
