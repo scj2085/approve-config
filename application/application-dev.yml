@@ -4,7 +4,8 @@ spring:
     host: localhost
     port: 5672
     username: springcloud
-    password: '{cipher}AQBcTcOpfJDg+0Rr5HRpxzEzIE76Ox9J51IHnLyZhzx3PFeCI7FllYhqJNElM235AUKGXcT8/af1KJxBVZGwBz5/Itw9EB3LJm71F0Zpy8t+i/OG+C8u9SIlHpTqk/yo/mKaXsgEne/Czr2A5WP3/9xFQaP67qqXYvhogsDJZsFGJXEBAF9A78Ac7MXDmsEI6mcA1BoQ1Bwc7SBxorEVV1K0PkmEG8TGsb6NWxV+DKP0hENLkIZqYX0hVvR+QTppNakFvKF7ve1xsLw++T1kjT48Ymp2GQR1MmzgFClLy6+qwNjaFaIHFt7PXRmvqPfbOzZzz2L+ReKMZZKcJMTiiuBFM/M055qutykI+oYUVpPuDdE4ZXjMmQytqJjmI8yYyNI=' #密码123456
+#    password: '{cipher}AQBcTcOpfJDg+0Rr5HRpxzEzIE76Ox9J51IHnLyZhzx3PFeCI7FllYhqJNElM235AUKGXcT8/af1KJxBVZGwBz5/Itw9EB3LJm71F0Zpy8t+i/OG+C8u9SIlHpTqk/yo/mKaXsgEne/Czr2A5WP3/9xFQaP67qqXYvhogsDJZsFGJXEBAF9A78Ac7MXDmsEI6mcA1BoQ1Bwc7SBxorEVV1K0PkmEG8TGsb6NWxV+DKP0hENLkIZqYX0hVvR+QTppNakFvKF7ve1xsLw++T1kjT48Ymp2GQR1MmzgFClLy6+qwNjaFaIHFt7PXRmvqPfbOzZzz2L+ReKMZZKcJMTiiuBFM/M055qutykI+oYUVpPuDdE4ZXjMmQytqJjmI8yYyNI=' #密码123456
+    password: 123456
 #    virtual-host: /work-office
   sleuth:
     sampler:
@@ -34,7 +35,8 @@ eureka:
   client:
     serviceUrl:
  #     defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
-      defaultZone: "http://shi:${eureka.password}@localhost:8761/eureka/" #如果端口加密，要加上域名，此问题待解决？？？？？？？？
+#      defaultZone: "http://shi:${eureka.password}@localhost:8761/eureka/" #如果端口加密，要加上域名，此问题待解决？？？？？？？？
+      defaultZone: "http://localhost:8761/eureka/" #如果端口加密，要加上域名，此问题待解决？？？？？？？？
 #    healthcheck:
 #      enabled: true	#eureka.client.healthcheck.enabled=true只能在application.yml中设置
  #   prefer-same-zone-eureka: false	#服务器部署区域设置，此配置不符合，不要打开注释，待解决？？？？？？
@@ -43,5 +45,6 @@ mysql:
   host: localhost
   port: 3306
   username: root
-  password: '{cipher}AQBalygAEqtll2G9dT7uh4IWVQZOopJmu1uPM6rLT6Y2cl2wEHpisa7Y9wO7+SaztSnWOTmALbwHKbw44qvM7a197NBCpUxXQKlCGvFpS6yYlfcxOPJytoSmLEbd3Is7SaGSWuQELv2eFkSYRrArErEHr2WxwcW1Wor+U/NsmXmPPKLVbe3KYr4qGRenDo+VbT1zxTrk2VEaYL5SdsCbbkp6qcr307kY63NmdPBQS3MyLp4jt1qgnlIe7Nzgvg9uTfwd0aZlUv7E0cvkYUs1QBt3bzf7Q3dXv0HXLlcmFZcfcqooz6O9zQZRZtnZT+QUyrKc46AgZbZ5gPkjZL6kx2qV/Nz3h2CvMKupSsL6ewJoBjBnE0Z5RTtyX4/TwpnBGuU=' #密码root
+#  password: '{cipher}AQBalygAEqtll2G9dT7uh4IWVQZOopJmu1uPM6rLT6Y2cl2wEHpisa7Y9wO7+SaztSnWOTmALbwHKbw44qvM7a197NBCpUxXQKlCGvFpS6yYlfcxOPJytoSmLEbd3Is7SaGSWuQELv2eFkSYRrArErEHr2WxwcW1Wor+U/NsmXmPPKLVbe3KYr4qGRenDo+VbT1zxTrk2VEaYL5SdsCbbkp6qcr307kY63NmdPBQS3MyLp4jt1qgnlIe7Nzgvg9uTfwd0aZlUv7E0cvkYUs1QBt3bzf7Q3dXv0HXLlcmFZcfcqooz6O9zQZRZtnZT+QUyrKc46AgZbZ5gPkjZL6kx2qV/Nz3h2CvMKupSsL6ewJoBjBnE0Z5RTtyX4/TwpnBGuU=' #密码root
+  password: root
 
