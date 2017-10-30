@@ -4,8 +4,10 @@ spring:
     host: localhost
     port: 5672
     username: springcloud
-    password: '{cipher}AQBcTcOpfJDg+0Rr5HRpxzEzIE76Ox9J51IHnLyZhzx3PFeCI7FllYhqJNElM235AUKGXcT8/af1KJxBVZGwBz5/Itw9EB3LJm71F0Zpy8t+i/OG+C8u9SIlHpTqk/yo/mKaXsgEne/Czr2A5WP3/9xFQaP67qqXYvhogsDJZsFGJXEBAF9A78Ac7MXDmsEI6mcA1BoQ1Bwc7SBxorEVV1K0PkmEG8TGsb6NWxV+DKP0hENLkIZqYX0hVvR+QTppNakFvKF7ve1xsLw++T1kjT48Ymp2GQR1MmzgFClLy6+qwNjaFaIHFt7PXRmvqPfbOzZzz2L+ReKMZZKcJMTiiuBFM/M055qutykI+oYUVpPuDdE4ZXjMmQytqJjmI8yYyNI=' #密码123456
-#    virtual-host: /work-office
+#    password: '{cipher}AQBcTcOpfJDg+0Rr5HRpxzEzIE76Ox9J51IHnLyZhzx3PFeCI7FllYhqJNElM235AUKGXcT8/af1KJxBVZGwBz5/Itw9EB3LJm71F0Zpy8t+i/OG+C8u9SIlHpTqk/yo/mKaXsgEne/Czr2A5WP3/9xFQaP67qqXYvhogsDJZsFGJXEBAF9A78Ac7MXDmsEI6mcA1BoQ1Bwc7SBxorEVV1K0PkmEG8TGsb6NWxV+DKP0hENLkIZqYX0hVvR+QTppNakFvKF7ve1xsLw++T1kjT48Ymp2GQR1MmzgFClLy6+qwNjaFaIHFt7PXRmvqPfbOzZzz2L+ReKMZZKcJMTiiuBFM/M055qutykI+oYUVpPuDdE4ZXjMmQytqJjmI8yYyNI=' #密码123456
+    password: '{cipher}AQAG/fSMvB8FsyOJa1AKfFqCJuM0eHXDhbCuhiGfkBZf/m2t9Up5fqo3WqhqO9ZoeMjhgFNQtskZI6HurtAMxrnycahOWBjckhVYOW/UhuA0XIApb0+8n4Fh50FfhQk+BQzob/wYYm+GrsRNl/PpwN1EeuvOPaDwmFoWV5lKRABryFkavBwPOGCB/djU8OLRFidVzNBerFUXcUsP8OTxTENu7ogy6Owr1RWzPax0mZge4eWz5gpmjZwTV3qwDDCxrpoFIAzUTlOQCF+GIv17Qs8PBvViiXCTAxQPfEhAdJghQ2rf4GISIWekJZBdARkBiQ8VHMbWmDBEu1FoCE+imNV61Oa1gwPDHC0NXeW08C8SH8bsGzgAdxhyZ4jvssDQKDs=' #自己密码123456
+    
+    #    virtual-host: /work-office
   sleuth:
     sampler:
       percentage: 1	#spans的收集率
@@ -24,7 +26,8 @@ spring:
 #      close: true	#？？？？
 
 eureka:
-  password: '{cipher}AQB250VG34Zc39FZ/B0Vk38tDy3NjpIVbMVmAAwpvfbZ+bJtWav4yYIX93bwS8Z0lNjAUhWT9nzpz3c3v1oC04GlAwBPiPCh42KiC8rx1UvNDCfsl7tycwAqLBimbFNaRR/PWsWuUPPgBHv79AYIHJZZLwMC9S0w7GWy8gLGktz8oxeGM4dDz+pxTTHiegR5HivQnHLEHUqAhEiHa43YSwmQrgOT+LUxAl/U3+jV+iV8h634h4uBudqEtuP3YOvlmu4eOya0sX0qCG7uEsUL6pHCzWrYPOKh3SQnUy/3AaNF6joaZZDJ+0VrXHxlArJEDPYnEnFFXoBP6jYphy79lCJok/vZq3Og6cVt1j+fHH2fYJdiAK+Md9zMlV+/r4rkIR0=' #密码123
+#  password: '{cipher}AQB250VG34Zc39FZ/B0Vk38tDy3NjpIVbMVmAAwpvfbZ+bJtWav4yYIX93bwS8Z0lNjAUhWT9nzpz3c3v1oC04GlAwBPiPCh42KiC8rx1UvNDCfsl7tycwAqLBimbFNaRR/PWsWuUPPgBHv79AYIHJZZLwMC9S0w7GWy8gLGktz8oxeGM4dDz+pxTTHiegR5HivQnHLEHUqAhEiHa43YSwmQrgOT+LUxAl/U3+jV+iV8h634h4uBudqEtuP3YOvlmu4eOya0sX0qCG7uEsUL6pHCzWrYPOKh3SQnUy/3AaNF6joaZZDJ+0VrXHxlArJEDPYnEnFFXoBP6jYphy79lCJok/vZq3Og6cVt1j+fHH2fYJdiAK+Md9zMlV+/r4rkIR0=' #密码123
+  password: '{cipher}AQBCXa2QQN5s/h+O0bkKCJpueO80LW1Bbd7I3b5+k8pZVSaWWtsPxcA/WmrZ48OAvxwGncC5OP9kpVp2V6mugDrvIQgekVOwygucMjmJidpQkaT/LMK0U6lfInVCb+Zy3GmPb6HBCQJtMy1qmVnK8/9RGQsaQ/wxLZSMJa+zZ8LxUVNGlYKIP0JgeT2M4ZDvaGelCngkXUs3zAt5iIhD56gVF+tG23CUugk7+1T8mUQ8BXQax7tb6ATNWrlu0R3QLuaxSnS/9m02/l/TPxz4s2MhonqqtjxZ49I2efhLkZtgWt/GNhNi7vdiejd3dNIrPUTa6i9mmSANWE/dapGAsGbli8IGKe3kH0UbPC5YXAmrJrt+2xtMaIDYI7ZuAtCBo3o=' #自己密码123
 #  instance:
 #    prefer-ip-address: true	#当猜测主机名时，服务器的IP地址应该在操作系统报告的主机名中使用。？？？？？
 #    health-check-url-path: ${server.context-path:}/health	#获取此实例的相对运行状况检查URL路径。然后，健康检查页面URL由主机名和通信类型构建，如securePort和nonSecurePort中指定的安全或不安全。????
@@ -43,5 +46,6 @@ mysql:
   host: localhost
   port: 3306
   username: root
-  password: '{cipher}AQBalygAEqtll2G9dT7uh4IWVQZOopJmu1uPM6rLT6Y2cl2wEHpisa7Y9wO7+SaztSnWOTmALbwHKbw44qvM7a197NBCpUxXQKlCGvFpS6yYlfcxOPJytoSmLEbd3Is7SaGSWuQELv2eFkSYRrArErEHr2WxwcW1Wor+U/NsmXmPPKLVbe3KYr4qGRenDo+VbT1zxTrk2VEaYL5SdsCbbkp6qcr307kY63NmdPBQS3MyLp4jt1qgnlIe7Nzgvg9uTfwd0aZlUv7E0cvkYUs1QBt3bzf7Q3dXv0HXLlcmFZcfcqooz6O9zQZRZtnZT+QUyrKc46AgZbZ5gPkjZL6kx2qV/Nz3h2CvMKupSsL6ewJoBjBnE0Z5RTtyX4/TwpnBGuU=' #密码root
-
+#  password: '{cipher}AQBalygAEqtll2G9dT7uh4IWVQZOopJmu1uPM6rLT6Y2cl2wEHpisa7Y9wO7+SaztSnWOTmALbwHKbw44qvM7a197NBCpUxXQKlCGvFpS6yYlfcxOPJytoSmLEbd3Is7SaGSWuQELv2eFkSYRrArErEHr2WxwcW1Wor+U/NsmXmPPKLVbe3KYr4qGRenDo+VbT1zxTrk2VEaYL5SdsCbbkp6qcr307kY63NmdPBQS3MyLp4jt1qgnlIe7Nzgvg9uTfwd0aZlUv7E0cvkYUs1QBt3bzf7Q3dXv0HXLlcmFZcfcqooz6O9zQZRZtnZT+QUyrKc46AgZbZ5gPkjZL6kx2qV/Nz3h2CvMKupSsL6ewJoBjBnE0Z5RTtyX4/TwpnBGuU=' #密码root
+  password: '{cipher}AQB/2vMNupGfJq21bG8EO1WEfcyLDCOLuyBP9Myto2kJ3kP74vD3UAyX1BKqVkSRFnY755LsUBRF5DJXm5rBzuOL31s3E3SijTnqvs9oSFzhd9v0p5+xlTjiJtL+ANEmTvVaNoGap1WmZecbHAO7quTqYyMl3ML8Eqgz1TjuqgghkOI1SmZAg1Qbl864/B8vM1meA2eFDlChCBel4mk0vBJyirLYjb9AjWC/cNGffaRpmJbng8XwuFkawUj3ljDaPdoG5Q9jfqZMEcZVihRqInzaC796FvBTUXA6MvKdhK1kXBk5ucfrPGRGEtdcgaOR9Y9xpmHQR3VZtXtdFbxwlMsBMsIotjd3Ul1yQaoXYtNvevmah6Tp5A2KSvXaTUALOx4=' #自己密码root
+  
